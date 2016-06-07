@@ -4,7 +4,7 @@ class I386ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
   url 'http://ftp.gnu.org/gnu/gcc/gcc-5.2.0/gcc-5.2.0.tar.gz'
   mirror 'http://ftp.gnu.org/gnu/gcc/gcc-5.2.0/gcc-5.2.0.tar.gz'
-  sha1 'b4ee6e9bdebc65223f95067d0cc1a634b59dad72'
+  sha1 '713211883406b3839bdba4a22e7111a0cff5d09b'
 
   depends_on 'gmp'
   depends_on 'libmpc'
