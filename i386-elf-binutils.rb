@@ -15,12 +15,13 @@ class I386ElfBinutils < Formula
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=i386-elf',
+                             '--disable-multilib',
                              '--disable-werror', 
                              '--enable-gold=yes',
                              "--prefix=#{prefix}"
       system 'make'
       system 'make install'
-      FileUtils.mv lib, libexec
+      # FileUtils.mv lib, libexec
     end
   end
 
