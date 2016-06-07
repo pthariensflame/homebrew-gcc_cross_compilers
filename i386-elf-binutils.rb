@@ -8,10 +8,10 @@ class I386ElfBinutils < Formula
   # depends_on 'apple-gcc42' => :build
 
   def install
-    ENV['CC'] = '/usr/local/bin/gcc-5'
-    ENV['CXX'] = '/usr/local/bin/g++-5'
-    ENV['CPP'] = '/usr/local/bin/cpp-5'
-    ENV['LD'] = '/usr/local/bin/gcc-5'
+    ENV['CC'] = '/usr/local/bin/gcc-6'
+    ENV['CXX'] = '/usr/local/bin/g++-6'
+    ENV['CPP'] = '/usr/local/bin/cpp-6'
+    ENV['LD'] = '/usr/local/bin/gcc-6'
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=i386-elf',
