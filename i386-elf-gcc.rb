@@ -2,8 +2,8 @@ require 'formula'
 
 class I386ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url 'http://ftpmirror.gnu.org/gcc/gcc-4.8.0/gcc-4.8.0.tar.bz2'
-  mirror 'http://ftp.gnu.org/gnu/gcc/gcc-4.8.0/gcc-4.8.0.tar.bz2'
+  url 'http://ftp.gnu.org/gnu/gcc/gcc-5.2.0/gcc-5.2.0.tar.gz'
+  mirror 'http://ftp.gnu.org/gnu/gcc/gcc-5.2.0/gcc-5.2.0.tar.gz'
   sha1 'b4ee6e9bdebc65223f95067d0cc1a634b59dad72'
 
   depends_on 'gmp'
@@ -14,10 +14,10 @@ class I386ElfGcc < Formula
   def install
     binutils = Formula.factory 'i386-elf-binutils'
 
-    ENV['CC'] = '/usr/local/bin/gcc-4.2'
-    ENV['CXX'] = '/usr/local/bin/g++-4.2'
-    ENV['CPP'] = '/usr/local/bin/cpp-4.2'
-    ENV['LD'] = '/usr/local/bin/gcc-4.2'
+    ENV['CC'] = '/usr/local/bin/gcc-5'
+    ENV['CXX'] = '/usr/local/bin/g++-5'
+    ENV['CPP'] = '/usr/local/bin/cpp-5'
+    ENV['LD'] = '/usr/local/bin/gcc-5'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
