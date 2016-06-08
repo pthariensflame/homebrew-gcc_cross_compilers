@@ -1,16 +1,17 @@
 require 'formula'
 
 class X8664ElfBinutils < Formula
-  homepage 'http://gcc.gnu.org'
-  url 'http://ftp.gnu.org/gnu/binutils/binutils-2.25.tar.gz'
-  sha1 'f10c64e92d9c72ee428df3feaf349c4ecb2493bd'
+  homepage "https://www.gnu.org/software/binutils/binutils.html"
+  url "http://ftpmirror.gnu.org/binutils/binutils-2.26.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.gz"
+  sha256 "9615feddaeedc214d1a1ecd77b6697449c952eab69d79ab2125ea050e944bcc1"
 
   depends_on 'gcc' => :build
   def install
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-5'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-5'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-5'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-5'
+    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-6'
+    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-6'
+    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-6'
+    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-6'
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=x86_64-elf','--disable-werror',
