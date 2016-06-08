@@ -21,6 +21,7 @@ class I386ElfBinutils < Formula
                              "--prefix=#{prefix}"
       system 'make'
       system 'make install'
+      FileUtils.rm_rf share
       # FileUtils.mv lib, libexec
     end
   end
