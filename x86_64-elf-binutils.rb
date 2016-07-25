@@ -1,6 +1,6 @@
 require 'formula'
 
-class I586ElfBinutils < Formula
+class X8664ElfBinutils < Formula
   homepage "https://www.gnu.org/software/binutils/binutils.html"
   url "http://ftpmirror.gnu.org/binutils/binutils-2.26.tar.gz"
   mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.gz"
@@ -19,6 +19,7 @@ class I586ElfBinutils < Formula
                              "--prefix=#{prefix}"
       system 'make all'
       system 'make install'
+
     end
   end
 
