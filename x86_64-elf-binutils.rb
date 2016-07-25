@@ -19,7 +19,7 @@ class X8664ElfBinutils < Formula
                              "--prefix=#{prefix}"
       system 'make all'
       system 'make install'
-
+      FileUtils.rm_rf share
     end
   end
 

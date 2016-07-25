@@ -34,7 +34,7 @@ class X8664ElfGcc < Formula
       FileUtils.ln_sf binutils.prefix/"x86_64-elf", prefix/"x86_64-elf"
       system 'make all-target-libgcc'
       system 'make install-target-libgcc'
-      FileUtils.rm_rf share/"man"/"man7"
+      FileUtils.rm_rf share
     end
   end
 end

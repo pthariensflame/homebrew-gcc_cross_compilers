@@ -19,7 +19,7 @@ class X8664ElfGdb < Formula
       system '../configure', '--target=x86_64-pc-linux', "--prefix=#{prefix}"
       system 'make'
       system 'make install'
-      FileUtils.rm_rf share/"locale"
+      FileUtils.rm_rf share
     end
   end
 end
